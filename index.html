@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html>
-<div class="mainbox" id="mainbox">    
-<title>
-    Quiz App
-</title>
-<header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
 
-<link rel="stylesheet" href="./styles.css">
-<script src="script.js"></script>
-
-</header>
-
+</head>
 
 <body>
-    <h2>You will be asked multiple-choice questions</h2>
-    <h3>Click the answer you think is correct</h3>
-    <h3>Your score will be shown at the end</h3>
+    <div class="mainbox" id="mainbox">
+        <header>
+            <h3>You will be asked multiple-choice questions</h3>
+            <h3>Click the answer you think is correct</h3>
+            <h3>Your score will be shown at the end</h3>
+        </header>
 
+        <p id="question">The question will appear here</p>
+        <div class="options" id="options">
+        <button class="opt1" id="opt1">Option 1</button>
+        <button class="opt2" id="opt2">Option 2</button>
+        <button class="opt3" id="opt3">Option 3</button>
+        <button class="opt4" id="opt4">Option 4</button>
+        </div>
+        <button class="next" id="next">Next</button>
 
-
-
-</div>
+        <div class="final" id="final">
+            <p>Final Score: </p>
+        </div>
+    </div>
+</body>    
 </html>
