@@ -41,4 +41,13 @@ buttons.forEach(button=> {
     });
 });
 
+const nxtb = document.querySelector('#next');
+
+nxtb.addEventListener('click', () => {
+    currentQuestionIndex = currentQuestionIndex + 1;
+    loadQuestion(currentQuestionIndex);
+    buttons.forEach(btn => btn.classList.remove('highlighted'));
+
+})
+
 loadQuestion(0);
