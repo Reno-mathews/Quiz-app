@@ -45,9 +45,16 @@ const nxtb = document.querySelector('#next');
 
 nxtb.addEventListener('click', () => {
     currentQuestionIndex = currentQuestionIndex + 1;
-    loadQuestion(currentQuestionIndex);
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion(currentQuestionIndex);
+    } 
+    else {
+        document.getElementById("optionS").style.display = "none";
+        document.getElementById("next").style.display = "none";
+        
+    }
     buttons.forEach(btn => btn.classList.remove('highlighted'));
 
-})
+};)
 
 loadQuestion(0);
