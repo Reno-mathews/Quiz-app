@@ -18,20 +18,14 @@ body {
     max-width: 500px;
 }
 
-.opt1,
-.opt2,
-.opt3,
-.opt4 {
+.opt {
     padding: 1rem;
     background-color: lightgreen;
     border-radius: 20px;
     margin: 0.5rem;
 }
 
-.opt1:hover,
-.opt2:hover,
-.opt3:hover,
-.opt4:hover {
+.opt:hover {
     background-color: darkgreen;
     color: white;
     cursor: pointer;
@@ -59,5 +53,5 @@ body {
     font-size: 1.5rem;
     margin-top: 1rem;
     color: gray;
-    
+
 }
