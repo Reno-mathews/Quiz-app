@@ -21,6 +21,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 const buttons = document.querySelectorAll('.opt');
+let selectedAnswer = 0;
 
 
 
@@ -29,14 +30,8 @@ buttons.forEach(button=> {
     button.addEventListener('click', () => {
        
 
-        const selectedAnswer = button.innerText;
+        selectedAnswer = button.innerText;
 
-        if (selectedAnswer == questions[currentQuestionIndex].answer) {
-            score++;
-            console.log("Correct! Score:", score);
-        } else {
-            console.log("Wrong!");
-        }
     });
 });
 
@@ -52,6 +47,13 @@ buttons.forEach(button => {
 const nxtb = document.querySelector('#next');
 
 nxtb.addEventListener('click', () => {
+    
+    if (selectedAnswer == questions[currentQuestionIndex].answer) {
+        score++;
+        console.log("Correct! Score:", score);
+    } else {
+        console.log("Wrong!");
+    }
     currentQuestionIndex = currentQuestionIndex + 1;
     if (currentQuestionIndex < questions.length) {
         loadQuestion(currentQuestionIndex);
