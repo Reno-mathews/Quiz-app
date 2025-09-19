@@ -68,6 +68,8 @@ nxtb.addEventListener('click', () => {
         document.getElementById("question").style.display = "none";
         document.getElementById("options").style.display = "none";
         document.getElementById("next").style.display = "none";
+        document.getElementById("submitbtn").style.display = "none";
+        document.getElementById("feedback").style.display = "none";
         document.getElementById("final").style.display = "block";
         document.getElementById("final").innerText = "Final Score: " + score + "/" + questions.length;
     }
@@ -81,14 +83,14 @@ const submitbtn = document.querySelector('#submitbtn');
 
 submitbtn.addEventListener('click', () => {
     if (selectedAnswer == null){
-    Psa.innerText = "Please select an answer.";
+    document.getElementById("Psa").innerText = "Please select an answer.";
     }
 
     else{
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
-        Rans.innerText = "The answer is correct."
+        document.getElementById("Rans").innerText = "The answer is correct."
     } else {
-        Wans.innerText= "The answer is incorrect."
+        document.getElementById("Wans").innerText= "The answer is incorrect."
     }
 }});
 
