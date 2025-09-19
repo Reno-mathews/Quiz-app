@@ -55,3 +55,9 @@ body {
     color: gray;
 
 }
+
+.highlighted {
+    background-color: green;
+    color: white;
+    border: none;
+}
