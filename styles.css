@@ -62,7 +62,7 @@ body {
     border: none;
 }
 
-.submit {
+.submitbtn {
     background-color: lightblue;
     margin-top: 2rem;
     padding: 1rem;
@@ -71,7 +71,7 @@ body {
     margin-left: 10px;
 }
 
-.submit:hover {
+.submitbtn:hover {
     background-color: aqua;
     color: black;
     transform: scale(1.05);

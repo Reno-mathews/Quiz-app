@@ -74,16 +74,19 @@ nxtb.addEventListener('click', () => {
     }
 });
 
+const submitbtn = document.querySelector('#submitbtn');
+
 submitbtn.addEventListener('click', () => {
     if (selectedAnswer == null){
-    alert("Please select an answer")
+    Psa.innerText = "Please select an answer.";
     }
+
     else{
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
         score++;
-        Rans.add
+        Rans.innerText = "The answer is correct."
     } else {
-        console.log("Wrong!");
+        Wans.innerText= "The answer is incorrect."
     }
 }});
 
