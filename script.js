@@ -74,4 +74,17 @@ nxtb.addEventListener('click', () => {
     }
 });
 
+submitbtn.addEventListener('click', () => {
+    if (selectedAnswer == null){
+    alert("Please select an answer")
+    }
+    else{
+    if (selectedAnswer == questions[currentQuestionIndex].answer) {
+        score++;
+        Rans.add
+    } else {
+        console.log("Wrong!");
+    }
+}});
+
 loadQuestion(0);

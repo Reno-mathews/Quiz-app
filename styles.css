@@ -61,3 +61,19 @@ body {
     color: white;
     border: none;
 }
+
+.submit {
+    background-color: lightblue;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.submit:hover {
+    background-color: aqua;
+    color: black;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
