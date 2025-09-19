@@ -5,6 +5,7 @@ let questions = [
 ];
 
 function loadQuestion(index) {
+    selectedAnswer = null;
     let q = questions[index];
     buttons.forEach(btn => btn.classList.remove('highlighted'));
     document.getElementById("question").innerText = q.question;
@@ -21,7 +22,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 const buttons = document.querySelectorAll('.opt');
-let selectedAnswer = 0;
+let selectedAnswer = null;
 
 
 
@@ -48,12 +49,17 @@ const nxtb = document.querySelector('#next');
 
 nxtb.addEventListener('click', () => {
     
+    if (selectedAnswer == null){
+        alert("Please select an answer")
+    }
+    else{
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
         score++;
         console.log("Correct! Score:", score);
     } else {
         console.log("Wrong!");
     }
+
     currentQuestionIndex = currentQuestionIndex + 1;
     if (currentQuestionIndex < questions.length) {
         loadQuestion(currentQuestionIndex);
@@ -65,7 +71,7 @@ nxtb.addEventListener('click', () => {
         document.getElementById("final").style.display = "block";
         document.getElementById("final").innerText = "Final Score: " + score + "/" + questions.length;
     }
-
+    }
 });
 
 loadQuestion(0);
