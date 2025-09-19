@@ -6,8 +6,9 @@ let questions = [
 
 function loadQuestion(index) {
     let q = questions[index];
-
+    buttons.forEach(btn => btn.classList.remove('highlighted'));
     document.getElementById("question").innerText = q.question;
+
 
     document.getElementById("opt1").innerText = q.options[0];
     document.getElementById("opt2").innerText = q.options[1];
@@ -26,9 +27,7 @@ const buttons = document.querySelectorAll('.opt');
 
 buttons.forEach(button=> {
     button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('highlighted'));
-
-        button.classList.add('highlighted');
+       
 
         const selectedAnswer = button.innerText;
 
@@ -41,6 +40,15 @@ buttons.forEach(button=> {
     });
 });
 
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('highlighted'));
+
+        button.classList.add('highlighted');
+    })
+
+});
+
 const nxtb = document.querySelector('#next');
 
 nxtb.addEventListener('click', () => {
@@ -49,12 +57,13 @@ nxtb.addEventListener('click', () => {
         loadQuestion(currentQuestionIndex);
     } 
     else {
-        document.getElementById("optionS").style.display = "none";
+        document.getElementById("question").style.display = "none";
+        document.getElementById("options").style.display = "none";
         document.getElementById("next").style.display = "none";
-        
+        document.getElementById("final").style.display = "block";
+        document.getElementById("final").innerText = "Final Score: " + score + "/" + questions.length;
     }
-    buttons.forEach(btn => btn.classList.remove('highlighted'));
 
-};)
+});
 
 loadQuestion(0);
