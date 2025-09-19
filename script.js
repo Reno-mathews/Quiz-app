@@ -72,6 +72,9 @@ nxtb.addEventListener('click', () => {
         document.getElementById("final").innerText = "Final Score: " + score + "/" + questions.length;
     }
     }
+    document.getElementById("Psa").innerText = "";
+    document.getElementById("Rans").innerText = "";
+    document.getElementById("Wans").innerText = "";
 });
 
 const submitbtn = document.querySelector('#submitbtn');
@@ -83,7 +86,6 @@ submitbtn.addEventListener('click', () => {
 
     else{
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
-        score++;
         Rans.innerText = "The answer is correct."
     } else {
         Wans.innerText= "The answer is incorrect."
