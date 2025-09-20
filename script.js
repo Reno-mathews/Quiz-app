@@ -76,8 +76,9 @@ nxtb.addEventListener('click', () => {
         document.getElementById("next").style.display = "none";
         document.getElementById("submitbtn").style.display = "none";
         document.getElementById("feedback").style.display = "none";
+        document.getElementById("Restart").style.display= "block";
         document.getElementById("final").style.display = "block";
-        document.getElementById("final").innerText = "Final Score: " + score + "/" + questions.length;
+        document.getElementById("finalscore").innerText = "Final Score: " + score + "/" + questions.length;
     }
     }
     document.getElementById("Psa").innerText = "";
