@@ -101,4 +101,27 @@ submitbtn.addEventListener('click', () => {
     }
 }});
 
+const restartbtn = document.getElementById("Restart");
+
+restartbtn.addEventListener('click', () =>{
+    currentQuestionIndex = 0;
+    score = 0;
+    selectedAnswer = null;
+    document.getElementById("Psa").innerText = "";
+    document.getElementById("Rans").innerText = "";
+    document.getElementById("Wans").innerText = "";
+    document.getElementById("progress-bar").style.width = "0%";
+
+    document.getElementById("question").style.display = "block";
+    document.getElementById("options").style.display = "block";
+    document.getElementById("next").style.display = "block";
+    document.getElementById("submitbtn").style.display = "block";
+    document.getElementById("feedback").style.display = "block";
+
+    document.getElementById("final").style.display = "none";
+
+
+    loadQuestion(0);
+})
+
 loadQuestion(0);
