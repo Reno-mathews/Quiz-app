@@ -90,3 +90,20 @@ body {
     text-align: right;
     color: green;
 }
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin: 20px 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}

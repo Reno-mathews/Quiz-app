@@ -7,6 +7,8 @@ let questions = [
 function loadQuestion(index) {
     selectedAnswer = null;
     let q = questions[index];
+        let progressPercent = ((index +1) / questions.length) * 100;
+    document.getElementById("progress-bar").style.width = progressPercent + "%";
     let qnum = index + 1;
     let totalq = questions.length;
     buttons.forEach(btn => btn.classList.remove('highlighted'));
