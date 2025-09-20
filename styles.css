@@ -85,3 +85,8 @@ body {
     border-radius: 10px;
     margin-top: 10px;
 }
+
+.progress {
+    text-align: right;
+    color: green;
+}

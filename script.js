@@ -7,6 +7,8 @@ let questions = [
 function loadQuestion(index) {
     selectedAnswer = null;
     let q = questions[index];
+    let qnum = index + 1;
+    let totalq = questions.length;
     buttons.forEach(btn => btn.classList.remove('highlighted'));
     document.getElementById("question").innerText = q.question;
 
@@ -15,6 +17,8 @@ function loadQuestion(index) {
     document.getElementById("opt2").innerText = q.options[1];
     document.getElementById("opt3").innerText = q.options[2];
     document.getElementById("opt4").innerText = q.options[3];
+
+    document.getElementById("progress").innerText = "Question " + qnum + " of " + totalq;
 
 }
 
