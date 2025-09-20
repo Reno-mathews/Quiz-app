@@ -21,7 +21,7 @@ function loadQuestion(index) {
     document.getElementById("opt4").innerText = q.options[3];
 
     document.getElementById("progress").innerText = "Question " + qnum + " of " + totalq;
-
+    document.getElementById("next").disabled = true;
 }
 
 let currentQuestionIndex = 0;
@@ -99,6 +99,8 @@ submitbtn.addEventListener('click', () => {
     } else {
         document.getElementById("Wans").innerText= "The answer is incorrect."
     }
+
+    document.getElementById("next").disabled = false;
 }});
 
 const restartbtn = document.getElementById("Restart");
