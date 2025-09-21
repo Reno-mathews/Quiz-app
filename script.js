@@ -58,13 +58,6 @@ nxtb.addEventListener('click', () => {
     if (selectedAnswer == null){
         alert("Please select an answer")
     }
-    else{
-    if (selectedAnswer == questions[currentQuestionIndex].answer) {
-        score++;
-        console.log("Correct! Score:", score);
-    } else {
-        console.log("Wrong!");
-    }
 
     currentQuestionIndex = currentQuestionIndex + 1;
     if (currentQuestionIndex < questions.length) {
@@ -80,7 +73,7 @@ nxtb.addEventListener('click', () => {
         document.getElementById("final").style.display = "block";
         document.getElementById("finalscore").innerText = "Final Score: " + score + "/" + questions.length;
     }
-    }
+    
     document.getElementById("Psa").innerText = "";
     document.getElementById("Rans").innerText = "";
     document.getElementById("Wans").innerText = "";
@@ -96,6 +89,7 @@ submitbtn.addEventListener('click', () => {
     else{
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
         document.getElementById("Rans").innerText = "The answer is correct."
+        score++;
     } else {
         document.getElementById("Wans").innerText= "The answer is incorrect."
     }
