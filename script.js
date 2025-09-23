@@ -120,4 +120,4 @@ restartbtn.addEventListener('click', () =>{
     loadQuestion(0);
 })
 
-loadQuestion(0);
+loadQuestion(0);  
