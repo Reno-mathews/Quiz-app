@@ -55,9 +55,9 @@ const nxtb = document.querySelector('#next');
 
 nxtb.addEventListener('click', () => {
     
-    if (selectedAnswer == null){
+    /*if (selectedAnswer == null){
         alert("Please select an answer")
-    }
+    }*/
 
     currentQuestionIndex = currentQuestionIndex + 1;
     if (currentQuestionIndex < questions.length) {
