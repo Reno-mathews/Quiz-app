@@ -122,6 +122,3 @@ restartbtn.addEventListener('click', () =>{
 
 loadQuestion(0);  
 
-
-
-
