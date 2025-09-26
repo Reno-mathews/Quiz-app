@@ -61,9 +61,9 @@ nxtb.addEventListener('click', () => {
 
     currentQuestionIndex = currentQuestionIndex + 1;
     if (currentQuestionIndex < questions.length) {
-        document.getElementById("Rans").style.display = "none";
-        document.getElementById("Wans").style.display = "none";
-        document.getElementById("Psa").style.display = "none";
+        document.getElementById("Rans").innerText = "";
+        document.getElementById("Wans").innerText = "";
+        document.getElementById("Psa").innerText = "";
 
         loadQuestion(currentQuestionIndex);
 
