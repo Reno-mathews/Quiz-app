@@ -4,6 +4,8 @@ let questions = [
     { question: "What is 4+4", options: [1, 2, 7, 8], answer: 8}
 ];
 
+const time_limit = 15;
+
 function loadQuestion(index) {
     selectedAnswer = null;
     let q = questions[index];
