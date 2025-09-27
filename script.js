@@ -16,6 +16,11 @@ function loadQuestion(index) {
     buttons.forEach(btn => btn.classList.remove('highlighted'));
     document.getElementById("question").innerText = q.question;
 
+    const time = time_limit;
+
+
+
+    
 
     document.getElementById("opt1").innerText = q.options[0];
     document.getElementById("opt2").innerText = q.options[1];
