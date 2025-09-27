@@ -20,7 +20,6 @@ function loadQuestion(index) {
 
 
 
-
     document.getElementById("opt1").innerText = q.options[0];
     document.getElementById("opt2").innerText = q.options[1];
     document.getElementById("opt3").innerText = q.options[2];
