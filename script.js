@@ -18,6 +18,7 @@ function loadQuestion(index) {
 
     const time = time_limit;
 
+    
 
 
     document.getElementById("opt1").innerText = q.options[0];
