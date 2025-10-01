@@ -3,8 +3,18 @@ let questions = [
     { question: "What is 3+3", options: [1, 2, 5, 6], answer: 6},
     { question: "What is 4+4", options: [1, 2, 7, 8], answer: 8}
 ];
+    let timer;
+    let timeLimit = 15;
 
-const time_limit = 15;
+    function startTimer() {
+        let timeLeft = timeLimit;
+        document.getElementById("timer").innerText = "Time left: " = timeLeft + "s";
+
+        timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById("timer").innerText = "Time left: " + timeLeft + 
+        })
+    }
 
 function loadQuestion(index) {
     selectedAnswer = null;
