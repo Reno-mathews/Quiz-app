@@ -12,21 +12,37 @@ let questions = [
 
         timer = setInterval(() => {
             timeLeft--;
-            document.getElementById("timer").innerText = "Time left: " + timeLeft + 
+            document.getElementById("timer").innerText = "Time left: " + timeLeft + "s";
+
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").innerText = "Time Left: " = timeLeft + "s";
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("Wans").innerText = "Time's up! The correct answer was " + questions[currentQuestionIndex].answer;
+                    document.getElementById("next").disabled = false;
+                    document.getElementById("submitbtn").disabled = true;
+                }
+            }, 1000);
+        
         })
     }
 
 function loadQuestion(index) {
+    clearInterval(timer);
+    startTimer();
+
     selectedAnswer = null;
+
     let q = questions[index];
         let progressPercent = ((index +1) / questions.length) * 100;
     document.getElementById("progress-bar").style.width = progressPercent + "%";
+
     let qnum = index + 1;
     let totalq = questions.length;
     buttons.forEach(btn => btn.classList.remove('highlighted'));
     document.getElementById("question").innerText = q.question;
-
-    const time = time_limit;
 
     
 
@@ -38,6 +54,7 @@ function loadQuestion(index) {
 
     document.getElementById("progress").innerText = "Question " + qnum + " of " + totalq;
     document.getElementById("next").disabled = true;
+    document.getElementById("submitbtn").disabled = false;
 }
 
 let currentQuestionIndex = 0;
