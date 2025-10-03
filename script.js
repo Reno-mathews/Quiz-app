@@ -28,6 +28,7 @@ let questions = [
 function loadQuestion(index) {
     clearInterval(timer);
     startTimer();
+    document.getElementById("submitbtn").disable = false;
 
     selectedAnswer = null;
 
@@ -113,6 +114,7 @@ nxtb.addEventListener('click', () => {
     document.getElementById("Psa").innerText = "";
     document.getElementById("Rans").innerText = "";
     document.getElementById("Wans").innerText = "";
+    document.getElementById("submitbtn").disabled = false;
 });
 
 const submitbtn = document.querySelector('#submitbtn');
