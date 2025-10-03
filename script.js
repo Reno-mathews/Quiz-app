@@ -8,15 +8,11 @@ let questions = [
 
     function startTimer() {
         let timeLeft = timeLimit;
-        document.getElementById("timer").innerText = "Time left: " = timeLeft + "s";
+        document.getElementById("timer").innerText = "Time left: " + timeLeft + "s";
 
         timer = setInterval(() => {
             timeLeft--;
             document.getElementById("timer").innerText = "Time left: " + timeLeft + "s";
-
-            timer = setInterval(() => {
-                timeLeft--;
-                document.getElementById("timer").innerText = "Time Left: " = timeLeft + "s";
 
                 if (timeLeft <= 0) {
                     clearInterval(timer);
@@ -26,8 +22,8 @@ let questions = [
                 }
             }, 1000);
         
-        })
-    }
+        }
+    
 
 function loadQuestion(index) {
     clearInterval(timer);
