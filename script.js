@@ -28,7 +28,7 @@ let questions = [
 function loadQuestion(index) {
     clearInterval(timer);
     startTimer();
-    document.getElementById("submitbtn").disable = false;
+    document.getElementById("submitbtn").disabled = false;
 
     selectedAnswer = null;
 
