@@ -127,6 +127,9 @@ submitbtn.addEventListener('click', () => {
     }
 
     else{
+
+    clearInterval(timer);
+
     if (selectedAnswer == questions[currentQuestionIndex].answer) {
         document.getElementById("Rans").innerText = "The answer is correct."
         score++;
@@ -135,6 +138,7 @@ submitbtn.addEventListener('click', () => {
     }
 
     document.getElementById("next").disabled = false;
+    document.getElementById("submitbtn").disabled = true;
 }});
 
 const restartbtn = document.getElementById("Restart");
