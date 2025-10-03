@@ -134,7 +134,7 @@ submitbtn.addEventListener('click', () => {
     }
 
     document.getElementById("next").disabled = false;
-    document.getElementById("submitbtn").disabled = true;
+    /*document.getElementById("submitbtn").disabled = true;*/
 }});
 
 const restartbtn = document.getElementById("Restart");
