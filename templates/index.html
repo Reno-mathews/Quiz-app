@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+</head>
+
+<body>
+    <div class="mainbox" id="mainbox">
+        <header>
+            <h3>You will be asked multiple-choice questions</h3>
+            <h3>Click the answer you think is correct</h3>
+            <h3>Your score will be shown at the end</h3>
+
+            <p class="timer" id="timer"></p>
+        </header>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar">
+                
+            </div>
+        </div>
+        
+        <p id="question">The question will appear here</p>
+        <div class="options" id="options">
+        <button class="opt" id="opt1">Option 1</button>
+        <button class="opt" id="opt2">Option 2</button>
+        <button class="opt" id="opt3">Option 3</button>
+        <button class="opt" id="opt4">Option 4</button>
+        </div>
+        <button class="submitbtn" id="submitbtn">Submit</button>
+        <button class="next" id="next">Next</button>
+
+        <div class="feedback" id="feedback">
+            <p class="Rans" id="Rans"></p>
+            <p class="Wans" id="Wans"></p>
+            <p class="Psa" id="Psa"></p> 
+        </div>
+        <div class="final" id="final">
+            <button class="Restart" id="Restart">Restart Quiz</button>
+            <p id="finalscore" class="finalscore">Final Score: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>    
+</html>  
