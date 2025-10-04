@@ -10,7 +10,7 @@ app.secret_key = "quiz_app"
 
 conn = psycopg2.connect(
     host ="localhost",
-    database = "quiz_data"
+    database = "quiz_data",
     user = "postgres",
     password = "Halosucks10@"
 )
