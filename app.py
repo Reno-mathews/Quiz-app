@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, flash, url_for, jsonify, sess
 import os
 import json
 import psycopg2
+from flask_cors import CORS
 
 
 app= Flask(__name__)
@@ -16,3 +17,6 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
+
+@app.route('/get_questions')
+def
