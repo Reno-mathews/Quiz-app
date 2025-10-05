@@ -23,3 +23,6 @@ cur = conn.cursor()
 def g_question():
     cur.execute("SELECT question_text, option1, option2, option3, option4, correct_answer, difficulty, category FROM quiz_data")
     questions = cur.fetchall()
+
+    transposed = list(zip(*questions))
+    
