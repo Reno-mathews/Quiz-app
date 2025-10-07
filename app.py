@@ -12,7 +12,7 @@ CORS(app)
 
 conn = psycopg2.connect(
     host ="localhost",
-    database = "quiz_data",
+    database = "quiz_app",
     user = "postgres",
     password = "Halosucks10@"
 )
@@ -33,8 +33,14 @@ def g_question():
             "options": [row[1], row[2], row[3], row[4]],
             "answer": row[5],
             "difficulty": row[6],
-            "category": row[7].
+            "category": row[7],
         }
 
         question_list.append(question_dict)
     return jsonify(question_list)
+
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
